@@ -1,0 +1,9 @@
+{
+	"scripts": {
+		"clean": "rmdir .\\js /s /q",
+		"build": "npx tsc"
+	},
+	"devDependencies": {
+		"typescript": "^4.5.2"
+	}
+}

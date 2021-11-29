@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowUnreachableCode": false,
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "sourceMap": false,
+    "target": "ES2017",
+    "module": "None",
+    "outDir": "js",
+    "esModuleInterop": false,
+    "moduleResolution": "Node",
+    "strict": true,
+    "alwaysStrict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "charset": "utf-8",
+    "emitBOM": true,
+  },
+  "include": [
+    "ts/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "js"
+  ]
+}
