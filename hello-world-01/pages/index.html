@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Live do Roger com TypeScript</title>
+    <meta http-equiv="cache" content="false" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./css/page.css" />
+    <style>
+        .card {
+            min-width: 32em;
+            max-width: 48em;
+        }
+    </style>
+    <script data-main="js/index.js" src="js/libs/require.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="card">
+            <div class="card-header"></div>
+            <div class="card-body">
+                <div class="input-area">
+                    <div class="input-area-borders">
+                        <div class="input-area-border-left"></div>
+                        <div class="input-area-border-label">
+                            <label class="input-area-label-text">Pseudo chave secreta</label>
+                        </div>
+                        <div class="input-area-border-right"></div>
+                    </div>
+                    <div class="input-area-element">
+                        <input class="sourcePseudoSecretKeyText" type="text" value="Assine o canal!" />
+                    </div>
+                </div>
+                <div class="input-area">
+                    <div class="input-area-borders">
+                        <div class="input-area-border-left"></div>
+                        <div class="input-area-border-label">
+                            <label class="input-area-label-text">Texto para criptografar</label>
+                        </div>
+                        <div class="input-area-border-right"></div>
+                    </div>
+                    <div class="input-area-element">
+                        <input class="sourceMessageText" type="text" value="Que tal um like para este video?" />
+                    </div>
+                </div>
+                <div class="input-area">
+                    <div class="input-area-borders">
+                        <div class="input-area-border-left"></div>
+                        <div class="input-area-border-label">
+                            <label class="input-area-label-text">Texto criptografado via AES, em formato Base64</label>
+                        </div>
+                        <div class="input-area-border-right"></div>
+                    </div>
+                    <div class="input-area-element">
+                        <input class="encryptedMessageText" type="text" readonly />
+                    </div>
+                </div>
+                <div class="input-area">
+                    <div class="input-area-borders">
+                        <div class="input-area-border-left"></div>
+                        <div class="input-area-border-label">
+                            <label class="input-area-label-text">Texto descriptografado via AES</label>
+                        </div>
+                        <div class="input-area-border-right"></div>
+                    </div>
+                    <div class="input-area-element">
+                        <input class="decryptedMessageText" type="text" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="card-actions">
+                <label class="button alternative encrypt">
+                    <span>Criptografar</span>
+                </label>
+                <hr class="separator">
+                <label class="button decrypt">
+                    <span>Descriptografar</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

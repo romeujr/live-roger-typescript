@@ -1,0 +1,205 @@
+:root {
+    /* --primary-color: #2b5aa0; */
+    --primary-color: hsl(216, 31%, 33%);
+    --primary-color-setected: hsla(216, 58%, 40%, 0.5);
+    --primary-text-color: #ffffff;
+    --accent-color: #b7c4c8;
+    --main-font: Helvetica;
+    --gradient-color-start: #ffffff;
+    --gradient-color-end: #efefef;
+    /* [Card] */
+    --card-border-radius: 4px;
+    --card-border-shadow-top-color: rgb(63, 63, 63, 16%);
+    --card-border-shadow-bottom-color: rgb(63, 63, 63, 8%);
+    --card-box-shadow: 0px 1px 1px 0px var(--card-border-shadow-bottom-color), 0px 1px 3px 1px var(--card-border-shadow-top-color);
+    /* [Buttom] */
+    --buttom-font: var(--main-font);
+    --buttom-border-radius: 4px;
+    --buttom-border-shadow-top-color: rgb(63, 63, 63, 16%);
+    --buttom-border-shadow-bottom-color: rgb(63, 63, 63, 8%);
+    --buttom-box-shadow: 0px 1px 1px 0px var(--buttom-border-shadow-bottom-color), 0px 1px 3px 1px var(--buttom-border-shadow-top-color);
+    /* [Input] */
+    --input-label-font: var(--main-font);
+    --input-element-font: var(--main-font);
+    --input-border-radius: 4px;
+    --input-border-color: var(--primary-color);
+    --input-border: 1px solid var(--input-border-color);
+}
+
+html * {
+    animation: 3s linear 1s;
+}
+
+div {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.main {
+    background-image: linear-gradient(to bottom right, var(--gradient-color-start), var(--gradient-color-end));
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    position: fixed;
+    overflow: auto;
+    font-family: var(--main-font);
+}
+
+.card {
+    margin: 1em;
+    box-sizing: border-box;
+    overflow: auto;
+    position: relative;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-box-shadow);
+}
+
+.card-header {
+    width: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.card-actions {
+    margin: 1em;
+    margin-top: 0em;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-actions .separator {
+    border-style: none;
+}
+
+.button {
+    text-transform: uppercase;
+    display: table;
+    min-width: 4em;
+    padding: 0.5em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: var(--buttom-border-radius);
+    background-color: var(--primary-color);
+    box-shadow: var(--buttom-box-shadow);
+}
+
+.button span,
+.button label {
+    margin: 0.5em;
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    font-family: var(--buttom-font);
+    color: var(--primary-text-color);
+}
+
+.button.alternative {
+    background-color: transparent;
+}
+
+.button.alternative span {
+    color: var(--primary-color);
+    font-weight: normal;
+}
+
+.button:active {
+    background-color: var(--primary-color-setected);
+}
+
+.button.alternative:active {
+    background-color: var(--primary-color-setected);
+}
+
+.input-area {
+    position: relative;
+    box-sizing: border-box;
+    border-radius: var(--input-border-radius);
+    border: unset;
+}
+
+.input-area:not(:first-child) {
+    margin-top: 1em;
+}
+
+.input-area .input-area-borders {
+    display: flex;
+    flex-direction: row;
+    border: unset;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    margin: auto;
+    position: absolute;
+}
+
+.input-area .input-area-borders .input-area-border-left {
+    width: 1em;
+    border-left: var(--input-border);
+    border-right: unset;
+    border-top: var(--input-border);
+    border-bottom: var(--input-border);
+    border-top-left-radius: var(--input-border-radius);
+    border-top-right-radius: unset;
+    border-bottom-left-radius: var(--input-border-radius);
+    border-bottom-right-radius: unset;
+}
+
+.input-area .input-area-borders .input-area-border-label {
+    border-left: unset;
+    border-right: unset;
+    border-top: unset;
+    border-bottom: var(--input-border);
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+}
+
+.input-area .input-area-borders .input-area-border-label .input-area-label-text {
+    font-size: 1em;
+    font-weight: bold;
+    top: -0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    white-space: nowrap;
+    position: relative;
+    color: var(--primary-color);
+    font-family: var(--input-label-font);
+}
+
+.input-area .input-area-borders .input-area-border-right {
+    flex-grow: 1;
+    border-left: unset;
+    border-right: var(--input-border);
+    border-top: var(--input-border);
+    border-bottom: var(--input-border);
+    border-top-left-radius: unset;
+    border-top-right-radius: var(--input-border-radius);
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: var(--input-border-radius);
+}
+
+.input-area .input-area-element {
+    position: relative;
+    border: unset;
+}
+
+.input-area input,
+.input-area textarea {
+    display: block;
+    width: calc(100% - 1em);
+    box-sizing: border-box;
+    margin: 0.5em;
+    border: 1px solid transparent;
+    background: none;
+    appearance: none;
+    outline: none;
+    font-size: 1em;
+    font-family: var(--input-element-font);
+}
